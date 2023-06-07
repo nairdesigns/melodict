@@ -1,5 +1,21 @@
 require 'json'
+require 'cloudinary'
+require 'cloudinary/uploader'
+require 'cloudinary/utils'
 
+# // Config
+Cloudinary.config do |config|
+  config.cloud_name = 'dql3aujqv'
+  config.api_key = '267434198476322'
+  config.api_secret = 'KFfWZ_0a8Ve5LX20oUPZDyiFGus'
+  config.secure = true
+end
+
+# // Upload
+Cloudinary::Uploader.upload "https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg", :public_id => "olympic_flag"
+
+# // Transform
+Cloudinary::Utils.cloudinary_url("olympic_flag", :width => 100, :height => 150, :crop => "fill")
 def warmup_exercise
   sarah = User.find_by(email: 'sarah@lickwars.com')
   warmup =
