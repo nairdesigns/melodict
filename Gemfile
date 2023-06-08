@@ -63,7 +63,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Custom
 gem 'cloudinary', '~> 1.16.0'
-gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
+gem 'faker'
 gem 'pundit'
 
 gem 'pry', '~> 0.14.2'
